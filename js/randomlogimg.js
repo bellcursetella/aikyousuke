@@ -1,14 +1,14 @@
 javascript: ((func, scr) => {
     scr = document.createElement("script");
     scr.src = "//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js";
-    scr.onload = function() {
+    scr.onload = () => {
         func(jQuery.noConflict(true))
     };
     document.body.appendChild(scr)
 })(($) => {
     "use strict";
     
-    const nextUInt = function() {
+    const nextUInt = () => {
         let x = Math.floor(Math.random() * 1000000000);
         let y = Math.floor(Math.random() * 1000000000);
         let z = Math.floor(Math.random() * 1000000000);
@@ -23,7 +23,7 @@ javascript: ((func, scr) => {
         return result / 4294967296;
     };
     
-    Math.randomInt = function(max) {
+    Math.randomInt = max => {
         return Math.floor(max * nextUInt());
     };    
     
