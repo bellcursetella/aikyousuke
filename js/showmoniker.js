@@ -15,14 +15,15 @@ javascript: ((func, scr) => {
             if (userAgent.indexOf("safari") !== -1 && userAgent.indexOf("chrome") == -1){
                 $('#text').text("※現在お使いのブラウザでは称号が記録されません！※");
             } else {
-                $('#text').text("※称号が登録されていません");
+                $('#text').text("※称号が登録されていません！");
             }
         } else {
-            $('#text').text("※称号が登録されていません");
+            $('#text').text("※称号が登録されていません！");
         }
     } else if (moniker == ""){
-        $('#text').text("※称号が登録されていません");
+        $('#text').text("※称号が登録されていません！");
     } else {
-        $('#text').text('<button type="button">test</button>');
+        $('#text').text(moniker);
+        $('#text').append('<button type="button">test</button>');
     }
 });
