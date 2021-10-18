@@ -15,15 +15,17 @@ javascript: ((func, scr) => {
             if (userAgent.indexOf("safari") !== -1 && userAgent.indexOf("chrome") == -1){
                 $('#text').text("※現在お使いのブラウザでは称号が記録されません！※");
             } else {
-                $('#text').text("※称号が登録されていません！");
+                $('#text').text("※称号が登録されていません→");
+                $('#text').append('<a href="../../baby/780/?text=shougou">');
             }
         } else {
-            $('#text').text("※称号が登録されていません！");
+            $('#text').text("※称号が登録されていません→");
+            $('#text').append('<a href="../../baby/780/?text=shougou">');
         }
     } else if (moniker == ""){
-        $('#text').text("※称号が登録されていません！");
+        $('#text').text("※称号が登録されていません→");
+        $('#text').append('<a href="../../baby/780/?text=shougou">');
     } else {
         $('#text').text(moniker);
-        $('#text').append('<button type="button">test</button>');
     }
 });
