@@ -10,7 +10,7 @@ javascript: ((func, scr) => {
     
     const userAgent = window.navigator.userAgent.toLowerCase();
     if (userAgent.indexOf("iphone") !== -1 || userAgent.indexOf("ipad") !== -1){
-        if (userAgent.indexOf("safari") !== -1 && userAgent.indexOf("chrome") == -1){
+        if (userAgent.indexOf("safari") !== -1 && userAgent.indexOf("chrome") == -1 && userAgent.indexOf("crios") == -1){
             $('#text').text("※現在お使いの端末、ブラウザでは遊ぶことができません！※");
         }
     }
